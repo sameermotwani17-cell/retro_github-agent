@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Cloned repos live here — do not commit them
+workspace/
+
+# Environment secrets
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS cruft
+.DS_Store
+Thumbs.db
