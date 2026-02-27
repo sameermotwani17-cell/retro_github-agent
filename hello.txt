@@ -1,0 +1,7 @@
+There's no `.env` file set up yet. The server requires a `GITHUB_TOKEN` to run.
+
+Would you like to:
+1. Create a `.env` file with your GitHub token, then run `npm start`
+2. Run anyway (it may fail without the token)
+
+What's your GitHub token, or would you like me to just run it and see what happens?
