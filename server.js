@@ -264,6 +264,15 @@ Task: ${prompt}`;
 const app = express();
 app.use(express.json());
 
+// CORS — allow requests from any origin (Vercel frontend)
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, ngrok-skip-browser-warning');
+  if (req.method === 'OPTIONS') return res.sendStatus(200);
+  next();
+});
+
 app.post('/webhook', async (req, res) => {
   const { repo, prompt } = req.body || {};
 
