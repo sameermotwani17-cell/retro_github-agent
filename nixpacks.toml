@@ -1,11 +1,8 @@
 [phases.setup]
-nixPkgs = ["nodejs_20"]
+nixPkgs = ["nodejs_20", "git"]
 
 [phases.install]
-cmds = [
-  "npm ci --omit=dev",
-  "npm install -g @anthropic-ai/claude-code"
-]
+cmds = ["npm ci --omit=dev"]
 
 [start]
 cmd = "node server.js"
